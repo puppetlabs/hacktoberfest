@@ -33,8 +33,6 @@ task :sync do
 
   begin
     client = Octokit::Client.new(:access_token => TOKEN)
-    client.user.login
-    client.auto_paginate = true
   rescue => e
     puts "Github login error: #{e.message}"
     exit 1
