@@ -19,11 +19,15 @@ end
 
 desc 'Sychronize all issues'
 task :sync do
-  TOKEN  = `git config --global github.token`.chomp
+  TOKEN   = ENV['GITHUB_TOKEN']
+  TOKEN ||= `git config --global github.token`.chomp
+
   if TOKEN.empty?
     puts "You need to generate a GitHub token:"
     puts "\t * https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line"
     puts "\t * git config --global github.token <token>"
+    puts
+    puts "Export that as the `GITHUB_TOKEN` environment variable or put it in your ~/.gitconfig."
     exit 1
   end
 
