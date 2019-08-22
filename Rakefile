@@ -19,8 +19,7 @@ end
 
 desc 'Sychronize all issues'
 task :sync do
-  TOKEN   = ENV['GITHUB_TOKEN']
-  TOKEN ||= `git config --global github.token`.chomp
+  TOKEN = ENV['GITHUB_TOKEN'] || `git config --global github.token`.chomp
 
   if TOKEN.empty?
     puts "You need to generate a GitHub token:"
