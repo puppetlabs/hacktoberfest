@@ -1,0 +1,24 @@
+name: Sync Issues
+
+on:
+  schedule:
+  - cron:  '*/15 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Set up Ruby
+      uses: actions/setup-ruby@v1
+    - name: Sync issues
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rake sync
+        
