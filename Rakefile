@@ -68,6 +68,7 @@ task :sync do
   end
 
   create.each do |issue|
+    puts "+ Creating issue: #{issue[:title]}"
     body = ERB.new(File.read('_issue_description.erb')).result(binding)
     client.create_issue(repo, issue[:title], body, :labels => "hacktoberfest,#{issue[:component]}")
   end
@@ -79,6 +80,7 @@ task :sync do
   end
 
   destroy.each do |issue|
+    puts "- Closing issue: #{issue[:title]}"
     client.close_issue(repo, issue[:number])
   end
 end
