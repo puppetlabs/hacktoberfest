@@ -4,6 +4,7 @@ _Note: This repo has no real content, other than this README. Do not file issues
 here. It simply mirrors our [beginner friendly issues](http://pup.pt/contribute) to make
 them discoverable. This guide should help you get started making your first PR!_
 
+
 ## Background
 
 Puppet uses [Jira](https://tickets.puppetlabs.com) for most of our issue tracking. This has the
@@ -11,6 +12,7 @@ unfortunate side effect that the [Hacktoberfest filters](https://github.com/sear
 won't pick them up. This repository mirrors issues so that you can find them. You should use the
 Jira links to get back to the actual ticket to find more information about it, participate in
 discussions, or to file your PR.
+
 
 ## Getting Started
 
@@ -29,6 +31,29 @@ repository to work in. For example:
 | [`RK`](https://tickets.puppetlabs.com/browse/RK)           | [`puppetlabs/r10k`](https://github.com/puppetlabs/r10k)                     |
 | [`TK`](https://tickets.puppetlabs.com/browse/TK)           | [`puppetlabs/trapperkeeper`](https://github.com/puppetlabs/trapperkeeper)   |
 | [`MODULES`](https://tickets.puppetlabs.com/browse/MODULES) | _various repositories named `puppetlabs/puppetlabs-<modulename>`_           |
+
+
+## Getting Help
+
+As you're getting into the codebase, you might run into things that don't make sense. Or you
+might need a little help understanding the architecture, or the execution model. In any case
+the community is here to help you out!
+
+* Puppet uses Slack for community interactions.
+   * [Sign up for an account](https://slack.puppet.com)
+   * Some interesting channels:
+      * [#puppet](http://puppetcommunity.slack.com/app_redirect?channel=puppet)
+      * [#puppet-dev](http://puppetcommunity.slack.com/app_redirect?channel=puppet-dev)
+      * [#forge-modules](http://puppetcommunity.slack.com/app_redirect?channel=forge-modules)
+      * [#testing](http://puppetcommunity.slack.com/app_redirect?channel=testing)
+* Google Group mailing lists:
+   * [Puppet Developers](https://groups.google.com/forum/#!forum/puppet-dev)
+   * [Puppet Users](https://groups.google.com/forum/#!forum/puppet-users)
+* Check out our [Office Hours schedule](https://puppet.com/community/office-hours) and see if
+  any sessions match up with the topic you're struggling with.
+  
+
+## Making a Pull Request
 
 1. Make sure you have a [Jira account](https://tickets.puppetlabs.com).
     * You'll need this to participate in issue discussions.
@@ -67,6 +92,7 @@ repository to work in. For example:
     * Include a link to the pull request in the ticket.
     * If feedback is given then make sure to update and address the feedback. Pull requests
       may be closed if there is no response.
+
 
 ## Complete Contributor Guidelines
 
