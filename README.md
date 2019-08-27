@@ -1,8 +1,8 @@
 # Hacktoberfest Issue Mirror
 
-Note: This repo has no real content, other than this README. It simply mirrors `#hacktoberfest`
-tagged issues to make them discoverable. This guide should help you get started making your
-first PR to our repositories!
+Note: This repo has no real content, other than this README. It simply mirrors our
+[beginner friendly issues](http://pup.pt/contribute) to make them discoverable. This
+guide should help you get started making your first PR!
 
 ## Background
 
