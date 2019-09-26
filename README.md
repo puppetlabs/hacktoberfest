@@ -84,7 +84,7 @@ the community is here to help you out!
     * Make sure you have added the necessary tests for your changes. See
       [the quickstart guide](https://github.com/puppetlabs/puppet/blob/master/docs/quickstart.md)
       if you need help getting started with this.
-1. Sign the [Contributor License Agreement](http://links.puppet.com/cla).
+1. Sign the [Contributor License Agreement](https://cla.puppet.com).
 1. Commit and push your tested code changes to your topic branch in your fork of the repo.
 1. Submit a pull request to the parent repository.
 1. Update the Jira ticket to indicate that you're ready for it to be reviewed.
