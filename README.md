@@ -1,5 +1,10 @@
 # Hacktoberfest Issue Mirror
 
+_Note: Hacktoberfest 2019 has concluded! Don't forget to [fill out your profile](https://hacktoberfest.digitalocean.com/profile)
+and request your tshirt. This repository is now inactive... until next year!_
+
+---------
+
 _Note: This repo has no real content, other than this README. Do not file issues or comments
 here. It simply mirrors our [beginner friendly issues](http://pup.pt/contribute) to make
 them discoverable. This guide should help you get started making your first PR!_
