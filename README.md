@@ -30,6 +30,10 @@ repository to work in. For example:
 |------------------------------------------------------------|-----------------------------------------------------------------------------|
 | [`PUP`](https://tickets.puppetlabs.com/browse/PUP)         | [`puppetlabs/puppet`](https://github.com/puppetlabs/puppet)                 |
 | [`FACT`](https://tickets.puppetlabs.com/browse/FACT)       | [`puppetlabs/facter`](https://github.com/puppetlabs/facter)                 |
+| [`PDK`](https://tickets.puppetlabs.com/browse/PDK)         | [`puppetlabs/pdk`](https://github.com/puppetlabs/pdk)                       |
+|                                                            | [`puppetlabs/pdk-templates`](https://github.com/puppetlabs/pdk-templates)   |
+|                                                            | [`rodjek/rspec-puppet`](https://github.com/rodjek/rspec-puppet)             |
+|                                                            | [`rodjek/puppet-lint`](https://github.com/rodjek/puppet-lint)               |
 | [`SERVER`](https://tickets.puppetlabs.com/browse/SERVER)   | [`puppetlabs/puppetserver`](https://github.com/puppetlabs/puppetserver)     |
 | [`PDOC`](https://tickets.puppetlabs.com/browse/PDOC)       | [`puppetlabs/puppet-strings`](https://github.com/puppetlabs/puppet-strings) |
 | [`PDB`](https://tickets.puppetlabs.com/browse/PDB)         | [`puppetlabs/puppetdb`](https://github.com/puppetlabs/puppetdb)             |
