@@ -3,6 +3,7 @@ require 'base64'
 require 'nokogiri'
 require 'open-uri'
 require 'octokit'
+require 'htmlentities'
 
 task :default do
   puts 'This rake task will syncronize the contents of the Beginner Friendly Tickets'
@@ -20,6 +21,9 @@ end
 desc 'Sychronize all issues'
 task :sync do
   TOKEN = ENV['GITHUB_TOKEN'] || `git config --global github.token`.chomp
+  ISSUE_LABELS = [
+    'Windows', 'Documentation', 'chocolatey', 'iis', 'sqlserver', 'registry'
+  ]
 
   if TOKEN.empty?
     puts "You need to generate a GitHub token:"
@@ -64,10 +68,14 @@ task :sync do
     gh_issues.find {|gh| gh[:title] == jira[:title]}
   end
 
-  create.each do |issue|
+  creategit pugitgit .each do |issue|
     puts "+ Creating issue: #{issue[:title]}"
     body = ERB.new(File.read('_issue_description.erb')).result(binding)
-    client.create_issue(repo, issue[:title], body, :labels => "hacktoberfest,#{issue[:component]}")
+    labels = ['hacktoberfest']
+    labels << HTMLEntities.new.decode(issue[:component]) unless issue[:component].nil?
+    labels << issue[:labels].select { |label| ISSUE_LABELS.include? label}.map { |label| HTMLEntities.new.decode(label)}
+    labels = labels.uniq.flatten.join(',')
+    client.create_issue(repo, issue[:title], body, :labels => labels)
   end
 
 
