@@ -68,7 +68,7 @@ task :sync do
     gh_issues.find {|gh| gh[:title] == jira[:title]}
   end
 
-  creategit pugitgit .each do |issue|
+  create.each do |issue|
     puts "+ Creating issue: #{issue[:title]}"
     body = ERB.new(File.read('_issue_description.erb')).result(binding)
     labels = ['hacktoberfest']
