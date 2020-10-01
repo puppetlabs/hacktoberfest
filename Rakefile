@@ -73,7 +73,7 @@ task :sync do
     body = ERB.new(File.read('_issue_description.erb')).result(binding)
     labels = ['hacktoberfest']
     labels << HTMLEntities.new.decode(issue[:component]) unless issue[:component].nil?
-    labels << issue[:labels].select { |label| ISSUE_LABELS.include? label}.map { |label| HTMLEntities.new.decode(label)}
+    labels << issue[:labels].select { |label| ISSUE_LABELS.map(&:downcase).include? label.downcase}.map { |label| HTMLEntities.new.decode(label)}
     labels = labels.uniq.flatten.join(',')
     client.create_issue(repo, issue[:title], body, :labels => labels)
   end
